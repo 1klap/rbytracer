@@ -95,4 +95,12 @@ RSpec.configure do |config|
   # as the one that triggered the failure.
   Kernel.srand config.seed
 =end
+  require 'zeitwerk'
+  loader = Zeitwerk::Loader.new
+  loader.push_dir("app//core")
+  loader.push_dir("app/core/math")
+  loader.push_dir("app/geometry")
+  loader.push_dir("app/integrators")
+  loader.push_dir("app/materials")
+  loader.setup
 end

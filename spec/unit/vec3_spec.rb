@@ -1,5 +1,4 @@
 require 'spec_helper'
-require_relative '../../app/core/math/vec3'
 
 RSpec.describe Vec3 do
   it "adds another Vec3 to itself in place" do
