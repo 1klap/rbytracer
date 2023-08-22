@@ -9,5 +9,6 @@ class SamplerIntegrator
   def render(scene)
     p self.inspect
     p scene.inspect
+    v = Vec3.new(1, 2, 3)
   end
 end

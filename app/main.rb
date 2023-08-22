@@ -16,6 +16,7 @@ class Main
     require 'zeitwerk'
     loader = Zeitwerk::Loader.new
     loader.push_dir("#{__dir__}/core")
+    loader.push_dir("#{__dir__}/core/math")
     loader.push_dir("#{__dir__}/geometry")
     loader.push_dir("#{__dir__}/integrators")
     loader.push_dir("#{__dir__}/materials")
