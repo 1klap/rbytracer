@@ -7,13 +7,14 @@ class Main
   def execute
     scene = Scene.new
     scene.primitive = Primitive.new Shape.new, Material.new
-    integrator = SamplerIntegrator.new(Camera.new, Sampler.new)
+    integrator = SamplerIntegrator.new(Camera.new(400, 300), Sampler.new)
 
     integrator.render(scene)
   end
 
   def config_autoload
     require 'zeitwerk'
+
     loader = Zeitwerk::Loader.new
     loader.push_dir("#{__dir__}/core")
     loader.push_dir("#{__dir__}/core/math")
