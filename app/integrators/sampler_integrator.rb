@@ -20,7 +20,7 @@ class SamplerIntegrator
 
     @camera.x_pixels.times do |x|
       @camera.y_pixels.times do |y|
-        ray = nil
+        ray = @camera.generate_ray(x, y)
         worker_args = [x, y, scene, ray]
         workers[(x * @camera.y_pixels + y) % MAX_WORKERS].send(worker_args)
       end
