@@ -30,4 +30,8 @@ class Vec3
   def length
     Math.sqrt((x*x) + (y*y) + (z*z))
   end
+
+  def dot(another_vec)
+    self.x * another_vec.x + self.y * another_vec.y + self.z * another_vec.z
+  end
 end
